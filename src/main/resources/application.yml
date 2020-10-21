@@ -25,10 +25,10 @@ spring:
           predicates:
             - Path= /myOrders/**
         - id: Return
-            uri: http://localhost:8085
-            predicates:
-              - Path= /returns/**
-        id: Collect
+          uri: http://localhost:8085
+          predicates:
+            - Path= /returns/**
+        - id: Collect
           uri: http://localhost:8086
           predicates:
             - Path= /collects/**
@@ -68,13 +68,13 @@ spring:
           predicates:
             - Path= /myOrders/**
         - id: Return
-            uri: http://Return:8080
-            predicates:
-              - Path= /returns/**
+          uri: http://Return:8080
+          predicates:
+            - Path= /returns/**
         - id: Collect
-            uri: http://Collect:8080
-            predicates:
-              - Path= /collects/**
+          uri: http://Collect:8080
+          predicates:
+            - Path= /collects/**
       globalcors:
         corsConfigurations:
           '[/**]':
