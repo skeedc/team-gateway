@@ -11,7 +11,7 @@ spring:
         - id: Product
           uri: http://localhost:8081
           predicates:
-            - Path=/products/** 
+            - Path=/products/**
         - id: Rental
           uri: http://localhost:8082
           predicates:
@@ -19,11 +19,19 @@ spring:
         - id: Delivery
           uri: http://localhost:8083
           predicates:
-            - Path=/deliveries/** 
+            - Path=/deliveries/**
         - id: Information
           uri: http://localhost:8084
           predicates:
             - Path= /myOrders/**
+        - id: Return
+            uri: http://localhost:8085
+            predicates:
+              - Path= /returns/**
+        id: Collect
+          uri: http://localhost:8086
+          predicates:
+            - Path= /collects/**
       globalcors:
         corsConfigurations:
           '[/**]':
@@ -46,7 +54,7 @@ spring:
         - id: Product
           uri: http://Product:8080
           predicates:
-            - Path=/products/** 
+            - Path=/products/**
         - id: Rental
           uri: http://Rental:8080
           predicates:
@@ -54,11 +62,19 @@ spring:
         - id: Delivery
           uri: http://Delivery:8080
           predicates:
-            - Path=/deliveries/** 
+            - Path=/deliveries/**
         - id: Information
           uri: http://Information:8080
           predicates:
             - Path= /myOrders/**
+        - id: Return
+            uri: http://Return:8080
+            predicates:
+              - Path= /returns/**
+        - id: Collect
+            uri: http://Collect:8080
+            predicates:
+              - Path= /collects/**
       globalcors:
         corsConfigurations:
           '[/**]':
